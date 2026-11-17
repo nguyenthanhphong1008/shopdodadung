@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phongnguyen Shop - Văn phòng phẩm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">✏️ Phongnguyen<span>SHOP</span></a>
+    <nav>
+      <a href="#home">Trang chủ</a>
+      <a href="#products">Sản phẩm</a>
+      <a href="#about">Giới thiệu</a>
+    </nav>
+    <button class="cart-button" id="openCart">🛒 Giỏ hàng <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">GÓC HỌC TẬP CỦA BẠN</p>
+        <h1>Tiếp sức sáng tạo<br><span>mỗi ngày!</span></h1>
+        <p>Đầy đủ dụng cụ học tập và văn phòng phẩm với mức giá thân thiện.</p>
+        <a class="primary-button" href="#products">Khám phá sản phẩm</a>
+      </div>
+      <div class="hero-art" aria-label="Minh họa dụng cụ học tập">
+        <div class="art-circle">✏️</div>
+        <div class="art-card card-one">📒<small>SỔ TAY</small></div>
+        <div class="art-card card-two">🖍️<small>BÚT MÀU</small></div>
+        <div class="art-card card-three">📐<small>DỤNG CỤ</small></div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="products">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CHỌN MÓN BẠN CẦN</p>
+          <h2>Sản phẩm nổi bật</h2>
+        </div>
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Tìm sản phẩm...">
+          <span>⌕</span>
+        </div>
+      </div>
+
+      <div class="filters" id="categoryFilters">
+        <button class="filter active" data-category="all">Tất cả</button>
+        <button class="filter" data-category="but">Bút viết</button>
+        <button class="filter" data-category="vo">Vở & sổ</button>
+        <button class="filter" data-category="dungcu">Dụng cụ học tập</button>
+        <button class="filter" data-category="khac">Khác</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>Không tìm thấy sản phẩm phù hợp.</p>
+    </section>
+
+    <section class="benefits" id="about">
+      <div><span>🚚</span><strong>Giao hàng tiện lợi</strong><small>Đặt hàng nhanh chóng</small></div>
+      <div><span>💰</span><strong>Giá cả hợp lý</strong><small>Phù hợp học sinh, sinh viên</small></div>
+      <div><span>🎁</span><strong>Nhiều lựa chọn</strong><small>Đủ đồ dùng học tập</small></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#">✏️ Phongnguyen<span>SHOP</span></a>
+    <p>Website bán văn phòng phẩm – Bài thực hành HTML, CSS và JavaScript.</p>
+    <small>© 2026 Phongnguyen Shop. Demo học tập.</small>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <div><p class="eyebrow">ĐƠN HÀNG CỦA BẠN</p><h2>Giỏ hàng</h2></div>
+      <button class="close-button" id="closeCart" aria-label="Đóng">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Tổng cộng</span><strong id="cartTotal">0₫</strong></div>
+      <button class="checkout-button" id="checkoutButton">Đặt hàng</button>
+      <p class="cart-note">Đây là chức năng đặt hàng mô phỏng.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
